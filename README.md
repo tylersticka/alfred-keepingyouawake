@@ -2,7 +2,7 @@
 
 > [Alfred 3](https://www.alfredapp.com/) workflow for toggling [KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake), a Caffeine clone for macOS.
 
-![](screenshot.png)
+<img src="screenshot.png" width="593">
 
 ## Install
 
