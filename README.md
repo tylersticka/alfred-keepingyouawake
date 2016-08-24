@@ -7,7 +7,7 @@
 ## Install
 
 1. [Install KeepingYouAwake](https://github.com/newmarcel/KeepingYouAwake#installation).
-2. Install the workflow.
+2. [Install the workflow](http://www.packal.org/workflow/keepingyouawake).
 
 Requires the Alfred [Powerpack](https://www.alfredapp.com/powerpack/).
 
