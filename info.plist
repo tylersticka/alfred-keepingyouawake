@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.tylersticka.keepingyouawake</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>65E70B36-2F34-418D-9BB7-1C3DE710819A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>2CD0439E-4F68-42B5-89C1-118D5C87529E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Tyler Sticka</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>KeepingYouAwake</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>kya</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>KeepingYouAwake: Toggle</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>2CD0439E-4F68-42B5-89C1-118D5C87529E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>if [ $(ps axu | egrep "caffeinate.*$(pgrep KeepingYouAwake)" | wc -l) -eq 1 ]; then
+	open -g keepingyouawake:///activate
+    echo "Your Mac won't sleep until you tell it to.";
+else
+	open -g keepingyouawake:///deactivate
+	echo "Your Mac will sleep normally.";
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>KeepingYouAwake</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>65E70B36-2F34-418D-9BB7-1C3DE710819A</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>250</integer>
+			<key>ypos</key>
+			<integer>30</integer>
+		</dict>
+		<key>2CD0439E-4F68-42B5-89C1-118D5C87529E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>30</integer>
+		</dict>
+		<key>65E70B36-2F34-418D-9BB7-1C3DE710819A</key>
+		<dict>
+			<key>xpos</key>
+			<integer>460</integer>
+			<key>ypos</key>
+			<integer>30</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/tylersticka/alfred-keepingyouawake</string>
+</dict>
+</plist>
