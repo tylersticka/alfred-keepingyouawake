@@ -17,4 +17,4 @@ In Alfred, type `kya` and `Enter` to toggle whether or not your Mac is allowed t
 
 ## License
 
-MIT © [Tyler Sticka][http://tylersticka.com/]
+MIT © [Tyler Sticka](http://tylersticka.com/)
