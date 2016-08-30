@@ -8,11 +8,11 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</key>
+		<key>3FD7D497-D290-4290-A11A-95BB5FB8E2DF</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>65E70B36-2F34-418D-9BB7-1C3DE710819A</string>
+				<string>65D0D0FE-A2C1-43A6-89D9-B5B81E327349</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -21,11 +21,60 @@
 				<false/>
 			</dict>
 		</array>
-		<key>2CD0439E-4F68-42B5-89C1-118D5C87529E</key>
+		<key>65D0D0FE-A2C1-43A6-89D9-B5B81E327349</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</string>
+				<string>B0A40C86-229B-4A8A-BAFD-D8F0972740EC</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EB2559F0-FCA2-4175-BEA2-55525106073B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3FD7D497-D290-4290-A11A-95BB5FB8E2DF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>EFB502CA-1012-477F-A9CA-33F58F340F6D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>EFB502CA-1012-477F-A9CA-33F58F340F6D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>FAC7D9F4-C7B9-48F2-B660-F77DABBEB446</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FAC7D9F4-C7B9-48F2-B660-F77DABBEB446</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>24EAA57F-28DA-4166-9200-D04D5F269B1E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -48,21 +97,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>kya</string>
-				<key>subtext</key>
-				<string></string>
-				<key>text</key>
-				<string>KeepingYouAwake: Toggle</string>
-				<key>withspace</key>
+				<key>lastpathcomponent</key>
 				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>Your Mac won't sleep until you tell it to.</string>
+				<key>title</key>
+				<string>KeepingYouAwake: Activated</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
+			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>2CD0439E-4F68-42B5-89C1-118D5C87529E</string>
+			<string>B0A40C86-229B-4A8A-BAFD-D8F0972740EC</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -74,13 +123,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>if [ $(ps axu | egrep "caffeinate.*$(pgrep KeepingYouAwake)" | wc -l) -eq 1 ]; then
-	open -g keepingyouawake:///activate
-    echo "Your Mac won't sleep until you tell it to.";
-else
-	open -g keepingyouawake:///deactivate
-	echo "Your Mac will sleep normally.";
-fi</string>
+				<string>open -g keepingyouawake:///activate</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -91,7 +134,83 @@ fi</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</string>
+			<string>65D0D0FE-A2C1-43A6-89D9-B5B81E327349</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>0</integer>
+				<key>matchstring</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>3FD7D497-D290-4290-A11A-95BB5FB8E2DF</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>kya</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Checking activation state...</string>
+				<key>script</key>
+				<string>pkya=$(pgrep KeepingYouAwake)
+
+if [ pkya -eq /dev/null ] || [ $(ps aux | egrep "caffeinate.*$pkya" | wc -l) -eq 1 ]; then
+  title="KeepingYouAwake: Activate"
+  subtitle="Your Mac won't sleep until you tell it to.";
+  icon="full.png"
+  activate=1
+else
+  title="KeepingYouAwake: Deactivate"
+  subtitle="Your Mac will sleep normally.";
+  icon="icon.png"
+  activate=0
+fi
+
+echo "{\"items\":[{\"uid\":\"smartToggle\",\"title\":\"$title\",\"subtitle\":\"$subtitle\",\"arg\":\"$activate\",\"icon\":{\"path\":\"$icon\"}}]}"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Allow or disallow your Mac from sleeping.</string>
+				<key>title</key>
+				<string>KeepingYouAwake: Toggle</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>EB2559F0-FCA2-4175-BEA2-55525106073B</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -105,14 +224,56 @@ fi</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>{query}</string>
+				<string>Your Mac won't sleep until you tell it to.</string>
 				<key>title</key>
-				<string>KeepingYouAwake</string>
+				<string>KeepingYouAwake: Deactivated</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
 			<key>uid</key>
-			<string>65E70B36-2F34-418D-9BB7-1C3DE710819A</string>
+			<string>24EAA57F-28DA-4166-9200-D04D5F269B1E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open -g keepingyouawake:///deactivate</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>FAC7D9F4-C7B9-48F2-B660-F77DABBEB446</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>inputstring</key>
+				<string>{query}</string>
+				<key>matchcasesensitive</key>
+				<true/>
+				<key>matchmode</key>
+				<integer>1</integer>
+				<key>matchstring</key>
+				<string>1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.filter</string>
+			<key>uid</key>
+			<string>EFB502CA-1012-477F-A9CA-33F58F340F6D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -121,26 +282,54 @@ fi</string>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>1EED9532-ADAA-43E5-9021-DD2C3EEDA5F0</key>
+		<key>24EAA57F-28DA-4166-9200-D04D5F269B1E</key>
 		<dict>
 			<key>xpos</key>
+			<integer>620</integer>
+			<key>ypos</key>
+			<integer>220</integer>
+		</dict>
+		<key>3FD7D497-D290-4290-A11A-95BB5FB8E2DF</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>110</integer>
+		</dict>
+		<key>65D0D0FE-A2C1-43A6-89D9-B5B81E327349</key>
+		<dict>
+			<key>xpos</key>
+			<integer>410</integer>
+			<key>ypos</key>
+			<integer>80</integer>
+		</dict>
+		<key>B0A40C86-229B-4A8A-BAFD-D8F0972740EC</key>
+		<dict>
+			<key>xpos</key>
+			<integer>620</integer>
+			<key>ypos</key>
+			<integer>80</integer>
+		</dict>
+		<key>EB2559F0-FCA2-4175-BEA2-55525106073B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>70</integer>
+			<key>ypos</key>
+			<integer>150</integer>
+		</dict>
+		<key>EFB502CA-1012-477F-A9CA-33F58F340F6D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
 			<integer>250</integer>
-			<key>ypos</key>
-			<integer>30</integer>
 		</dict>
-		<key>2CD0439E-4F68-42B5-89C1-118D5C87529E</key>
+		<key>FAC7D9F4-C7B9-48F2-B660-F77DABBEB446</key>
 		<dict>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>410</integer>
 			<key>ypos</key>
-			<integer>30</integer>
-		</dict>
-		<key>65E70B36-2F34-418D-9BB7-1C3DE710819A</key>
-		<dict>
-			<key>xpos</key>
-			<integer>460</integer>
-			<key>ypos</key>
-			<integer>30</integer>
+			<integer>220</integer>
 		</dict>
 	</dict>
 	<key>webaddress</key>
